@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* DEBUG */
+.debug {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.dbg {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+/* PAGE STRUCTURE */
+.up {
+  width: 100%;
+  height: calc(100vh - 90px);
+}
+
+.down {
+  width: 100%;
+  height: 90px;
+}
+/* /PAGE STRUCTURE */
+
+/* SIDEBAR */
+#sidebar {
+  width: 200px;
+  height: 100%;
+}
+
+/* UPGRADE SECTION */
+.main-top {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
