@@ -4,24 +4,32 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+
 li {
   list-style: none;
 }
 
-/* DEBUG */
-.debug {
-  background-color: rgba(0, 0, 255, 0.2);
+.d-flex {
+  display: flex;
 }
 
-.dbg {
-  background-color: rgba(255, 255, 0, 0.2);
+/* DEBUG */
+.debug {
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid black;
 }
+
 
 /* PAGE STRUCTURE */
 .up {
   width: 100%;
   height: calc(100vh - 90px);
   background-color: #141922;
+  overflow: hidden;
 }
 
 .down {
@@ -29,40 +37,69 @@ li {
   height: 90px;
   background-color: #282828;
 }
+
+.content {
+  width: calc(100% - 225px);
+  padding-top: 90px;
+  overflow: auto;
+}
 /* /PAGE STRUCTURE */
 
 /* SIDEBAR */
 #sidebar {
-  width: 200px;
+  width: 225px;
+  min-height: 450px;
   height: 100%;
   background-color: black;
   color: white;
-  overflow: auto;
-  padding: 20px;
-  position: relative;
+  /* padding: 20px; */
 }
 
 #sidebar nav {
   margin: 20px 0;
 }
 
-#sidebar img {
-  width: 80%;
+#sidebar nav li,
+#sidebar nav {
+  margin-bottom: 10px;
 }
 
-.sidebar-under {
-  position: absolute;
-  bottom: 10px;
+#sidebar img {
+  width: 70%;
 }
+
+.sidebar-top {
+  height: calc(100% - 80px);
+}
+
+.sidebar-bottom {
+  height: 80px;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.playlist {
+  /* percentuale da verificare con i contenuti reali */
+  height: calc(100% - 165px);
+}
+
+.playlist-list {
+   /* percentuale da verificare con i contenuti reali */
+  height: calc(100% - 50px);
+  overflow: auto;
+}
+
 
 /* UPGRADE SECTION */
 .main-top {
-  width: calc(100% - 200px);
+  width: calc(100% - 225px);
   height: 80px;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
-  left: 200px;
+  right: 0;
   z-index: 999;
   display: flex;
   justify-content: flex-end;
@@ -78,4 +115,22 @@ li {
   cursor: pointer;
   margin-right: 10px;
   color: white;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width:600px){
+  #sidebar {
+    width: 50px;
+  }
+  .content,
+  .main-top {
+    width: calc(100% - 50px);
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .logo-desktop {
+    display: none;
+  }
 }
