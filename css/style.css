@@ -17,12 +17,6 @@ li {
   display: flex;
 }
 
-/* DEBUG */
-.debug {
-  background-color: rgba(0, 255, 0, 0.2);
-  border: 1px solid black;
-}
-
 
 /* PAGE STRUCTURE */
 .up {
@@ -51,46 +45,93 @@ li {
   min-height: 450px;
   height: 100%;
   background-color: black;
-  color: white;
-  /* padding: 20px; */
+  color: #a3a3a3;
+  font-size: 0.8rem;
+  padding: 20px 20px 5px 20px;
+}
+
+.sidebar-top {
+  height: calc(100% - 60px);
+}
+
+.sidebar-bottom {
+  height: 60px;
+  
+}
+
+#sidebar li {
+  margin-bottom: 10px;
+}
+
+#sidebar nav li,
+#sidebar .sidebar-bottom div,
+#sidebar .sidebar-top .crea-playlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#sidebar span {
+  margin-left: 10px;
+}
+
+/* SIDEBAR MENU */
+.logo-mobile {
+  display: none;
 }
 
 #sidebar nav {
   margin: 20px 0;
 }
 
-#sidebar nav li,
-#sidebar nav {
-  margin-bottom: 10px;
-}
-
-#sidebar img {
+#sidebar .logo-desktop img {
   width: 70%;
 }
 
-.sidebar-top {
-  height: calc(100% - 80px);
+#sidebar li img {
+  width: 30px;
 }
 
-.sidebar-bottom {
-  height: 80px;
-}
-
-.logo-mobile {
-  display: none;
-}
-
+/* PLAYLIST */
 .playlist {
-  /* percentuale da verificare con i contenuti reali */
-  height: calc(100% - 165px);
+  height: calc(100% - 205px);
 }
 
 .playlist-list {
-   /* percentuale da verificare con i contenuti reali */
   height: calc(100% - 50px);
   overflow: auto;
 }
 
+.playlist-top .fa-solid{
+  color:  #a3a3a3;
+  font-size: 2.5rem;
+}
+
+.crea-playlist {
+  margin-bottom: 10px;
+}
+
+/* SIDEBAR-BOTTOM */
+.sidebar-bottom {
+  flex-direction: column;
+  justify-content: end;
+}
+
+#sidebar .sidebar-bottom div:first-child {
+  border-bottom: 2px solid #a3a3a3;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+#sidebar .sidebar-bottom div:first-child img {
+  width: 0.8rem;
+}
+
+#sidebar .sidebar-bottom div:last-child img {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: gray;
+  border-radius: 50%;
+}
 
 /* UPGRADE SECTION */
 .main-top {
@@ -101,7 +142,6 @@ li {
   top: 0;
   right: 0;
   z-index: 999;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
@@ -122,6 +162,7 @@ li {
 @media screen and (max-width:600px){
   #sidebar {
     width: 50px;
+    padding: 10px;
   }
   .content,
   .main-top {
@@ -132,5 +173,23 @@ li {
   }
   .logo-desktop {
     display: none;
+  }
+  .remove {
+    display: none;
+  }
+  #sidebar nav img {
+    width: 100%;
+  }
+  #sidebar nav {
+    margin: 10px 0 0 0;
+  }
+  #sidebar nav li {
+    margin: 0 0 5px 0;
+  }
+  #sidebar .sidebar-bottom div:first-child {
+    border: none;
+  }
+  .sidebar-bottom {
+    align-items: center;
   }
 }
