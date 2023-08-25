@@ -38,12 +38,6 @@ li a {
   height: 90px;
   background-color: #282828;
 }
-
-.content {
-  width: calc(100% - 225px);
-  padding-top: 90px;
-  overflow: auto;
-}
 /* /PAGE STRUCTURE */
 
 /* SIDEBAR */
@@ -182,7 +176,19 @@ li a {
   color: white;
 }
 
+/* CONTENT */
+.content {
+  width: calc(100% - 225px);
+  padding-top: 90px;
+  overflow: auto;
+}
+
 /* NAVBAR */
+.navbar {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .navbar ul{
   flex-direction: row;
   flex-wrap: wrap;
@@ -211,6 +217,55 @@ li a {
   cursor: pointer;
 }
 
+/* RECENTLY PLAYED */
+.recently-played {
+  padding: 0 20px;
+}
+
+.recently-played h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 6), 1fr));
+}
+
+.card {
+  width: 95%;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card-top {
+  width: 100%;
+  position: relative;
+}
+
+.card-bottom {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #a3a3a3;
+}
+
+.layover {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  font-size: 500%;
+  z-index: 5;
+}
+
 /* HOVER EFFECTS */
 a:hover,
 li:hover a,
@@ -223,6 +278,16 @@ li:hover a,
   scale: 1.2;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+.card:hover img{
+  opacity: 0.5;
+}
+
+.card:hover .layover {
+  display: block;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width:600px){
@@ -258,4 +323,17 @@ li:hover a,
   .sidebar-bottom {
     align-items: center;
   }
+}
+
+/* CARDS RESPONSIVE */
+@media screen and (max-width:991px) {
+  .row {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  }
+}
+
+  @media screen and (max-width:767px) {
+    .row {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
 }
