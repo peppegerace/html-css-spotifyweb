@@ -7,10 +7,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'PT Sans', sans-serif;
+  color: white;
 }
 
 li {
   list-style: none;
+}
+
+a,
+li a {
+  text-decoration: none;
+  color: #a3a3a3;
 }
 
 .d-flex {
@@ -63,9 +70,10 @@ li {
   margin-bottom: 10px;
 }
 
-#sidebar nav li,
+#sidebar nav li a,
 #sidebar .sidebar-bottom div,
-#sidebar .sidebar-top .crea-playlist {
+#sidebar .sidebar-bottom div a,
+#sidebar .sidebar-top .add-playlist {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -92,6 +100,21 @@ li {
   width: 30px;
 }
 
+.sidebar-top .active {
+  position: relative;
+}
+
+.sidebar-top .active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid  #7db62a;
+  cursor: pointer;
+}
+
 /* PLAYLIST */
 .playlist {
   height: calc(100% - 205px);
@@ -107,8 +130,9 @@ li {
   font-size: 2.5rem;
 }
 
-.crea-playlist {
+.add-playlist {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /* SIDEBAR-BOTTOM */
@@ -132,6 +156,7 @@ li {
   background-color: gray;
   border-radius: 50%;
 }
+/* /SIDEBAR */
 
 /* UPGRADE SECTION */
 .main-top {
@@ -153,8 +178,49 @@ li {
   border-radius: 20px;
   padding: 5px 30px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 20px;
   color: white;
+}
+
+/* NAVBAR */
+.navbar ul{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar li {
+  margin: 10px;
+}
+
+.navbar .active {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar .active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 35%;
+  height: 100%;
+  transform: translate(-50%);
+  border-bottom: 2px solid  #7db62a;
+  cursor: pointer;
+}
+
+/* HOVER EFFECTS */
+a:hover,
+li:hover a,
+.add-playlist:hover i,
+.add-playlist:hover span {
+  color: white;
+}
+
+.main-top button:hover {
+  scale: 1.2;
 }
 
 
