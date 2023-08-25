@@ -7,6 +7,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
   color: white;
 }
 
@@ -74,7 +75,12 @@ li a {
 }
 
 #sidebar span {
-  margin-left: 10px;
+  margin-left: 5px;
+}
+
+#sidebar h3,
+#sidebar nav .active .remove {
+  color: white;
 }
 
 /* SIDEBAR MENU */
@@ -186,7 +192,6 @@ li a {
 /* NAVBAR */
 .navbar {
   font-size: 0.9rem;
-  font-weight: 700;
 }
 
 .navbar ul{
@@ -218,13 +223,14 @@ li a {
 }
 
 /* RECENTLY PLAYED */
-.recently-played {
+.recently-played,
+.created-for-you,
+.popular-artist {
   padding: 0 20px;
 }
 
-.recently-played h2 {
+.content h2 {
   font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -253,7 +259,6 @@ li a {
 
 .subtitle {
   font-size: 0.8rem;
-  font-weight: 700;
   color: #a3a3a3;
 }
 
@@ -265,6 +270,19 @@ li a {
   transform: translate(-50% , -50%);
   font-size: 40px;
   z-index: 5;
+}
+/* CREATED FOR YOU */
+.created-for-you h2 {
+  margin-bottom: 5px;
+}
+
+.created-for-you .subtitle {
+  margin-bottom: 30px;
+}
+
+/* POPULAR ARTIST */
+.popular-artist .card .card-top img{
+  border-radius: 50%;
 }
 
 /* HOVER EFFECTS */
