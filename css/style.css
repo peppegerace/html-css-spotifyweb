@@ -38,6 +38,7 @@ li a {
   width: 100%;
   height: 90px;
   background-color: #282828;
+  justify-content: space-between;
 }
 /* /PAGE STRUCTURE */
 
@@ -285,6 +286,135 @@ li a {
   border-radius: 50%;
 }
 
+/* PLAYER SECTION */
+.player-name,
+.player-nav,
+.player-instruments {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.down img{
+  width: 50px;
+}
+
+/* PLAYER-NAME */
+.player-name {
+  width: 20%;
+  min-width: 150px;
+}
+
+.artist {
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+  
+.artist-text {
+  scale: 0.7;
+}
+
+.artist-link {
+  color: #a3a3a3;
+}
+
+/* PLAYER-NAV */
+.player-nav {
+  width: 40%;
+  min-width: 250px;
+  flex-direction: column;
+  justify-content:center ;
+}
+
+.player-nav nav {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.player-nav ul{
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-nav ul li {
+  cursor: pointer;
+}
+
+.player-nav ul li .fa-circle-play{
+  font-size:1.5rem
+}
+
+.central-bar {
+  width: 100%;
+  font-size: 0.7rem;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.player-line {
+  width: 70%;
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.player-line::after {
+  content: "";
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+  width: 17%;
+  border-bottom: 4px solid  white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* PLAYER-INSTRUMENTS */
+.player-instruments {
+  width: 20%;
+  min-width: 150px;
+  justify-content: end;
+  margin-right: 10px;
+  position: relative;
+}
+
+.player-instruments i {
+  margin-left: 10px;
+}
+
+.instruments-icon {
+  min-width: 90px;
+  font-size: 0.9rem;
+}
+
+.instruments-volume {
+  width: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+
+.volume-line {
+  width: 100%;
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.volume-line::after {
+  content: "";
+  position: absolute;
+  bottom: 24%;
+  left: 5%;
+  width: 30%;
+  border-bottom: 4px solid  white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* HOVER EFFECTS */
 a:hover,
 li:hover a,
@@ -306,6 +436,11 @@ li:hover a,
 
 .card:hover .layover {
   display: block;
+}
+
+.fa-heart:hover,
+.fa-folder:hover {
+  color: white;
 }
 
 /* RESPONSIVE */
