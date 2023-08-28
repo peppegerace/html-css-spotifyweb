@@ -1,3 +1,13 @@
+/* CUSTOM PROPRIERTIES */
+:root {
+  --dark-blue: #141922;
+  --dark-grey: #282828;
+  --grey: #595959;
+  --lightgrey: #c1c1c1;
+  --lime: #97df2c;
+}
+
+/* GENERAL PROPRIERTIES */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +28,7 @@ li {
 a,
 li a {
   text-decoration: none;
-  color: #a3a3a3;
+  color: var(--lightgrey);
 }
 
 .d-flex {
@@ -30,14 +40,14 @@ li a {
 .up {
   width: 100%;
   height: calc(100vh - 90px);
-  background-color: #141922;
+  background-color: var(--dark-blue);
   overflow: hidden;
 }
 
 .down {
   width: 100%;
   height: 90px;
-  background-color: #282828;
+  background-color: var(--dark-grey);
   justify-content: space-between;
 }
 /* /PAGE STRUCTURE */
@@ -48,7 +58,7 @@ li a {
   min-height: 450px;
   height: 100%;
   background-color: black;
-  color: #a3a3a3;
+  color: var(--lightgrey);
   font-size: 0.8rem;
   padding: 20px 20px 5px 20px;
 }
@@ -112,7 +122,7 @@ li a {
   left: -20px;
   width: 100%;
   height: 100%;
-  border-left: 2px solid  #7db62a;
+  border-left: 2px solid  var(--lime);
   cursor: pointer;
 }
 
@@ -127,7 +137,7 @@ li a {
 }
 
 .playlist-top .fa-solid{
-  color:  #a3a3a3;
+  color:  var(--lightgrey);
   font-size: 2.5rem;
 }
 
@@ -143,7 +153,7 @@ li a {
 }
 
 #sidebar .sidebar-bottom div:first-child {
-  border-bottom: 2px solid #a3a3a3;
+  border-bottom: 2px solid var(--lightgrey);
   margin: 5px 0;
   padding: 5px 0;
 }
@@ -154,7 +164,7 @@ li a {
 #sidebar .sidebar-bottom div:last-child img {
   width: 1.4rem;
   height: 1.4rem;
-  background-color: gray;
+  background-color: var(--grey);
   border-radius: 50%;
 }
 /* /SIDEBAR */
@@ -219,7 +229,7 @@ li a {
   width: 35%;
   height: 100%;
   transform: translate(-50%);
-  border-bottom: 2px solid  #7db62a;
+  border-bottom: 2px solid  var(--lime);
   cursor: pointer;
 }
 
@@ -260,7 +270,7 @@ li a {
 
 .subtitle {
   font-size: 0.8rem;
-  color: #a3a3a3;
+  color: var(--lightgrey);
 }
 
 .layover {
@@ -328,7 +338,7 @@ li a {
 }
 
 .artist-link {
-  color: #a3a3a3;
+  color: var(--lightgrey);
 }
 
 /* PLAYER-NAV */
@@ -367,7 +377,7 @@ li a {
 .player-line {
   width: 70%;
   height: 4px;
-  background-color: #5a5a5a;
+  background-color: var(--grey);
   border-radius: 5px;
   display: inline-block;
   margin: 0 10px;
@@ -377,7 +387,7 @@ li a {
 .elastic-line {
   height: 100%;
   width: 20%;
-  background-color:  #bebebe;
+  background-color:  var(--lightgrey);
   border-radius: 5px;
   position: relative;
 }
@@ -396,7 +406,7 @@ li a {
 /* PLAYER-INSTRUMENTS */
 .player-instruments {
   width: 20%;
-  min-width: 150px;
+  min-width: 180px;
   justify-content: end;
   margin-right: 10px;
 }
@@ -449,7 +459,7 @@ li:hover a,
 }
 
 .player-line:hover .elastic-line {
-  background-color: #7db62a;
+  background-color: var(--lime);
 }
 
 .player-line:hover .point-line {
