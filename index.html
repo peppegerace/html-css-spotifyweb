@@ -303,6 +303,7 @@
   <!-- lower section -->
   <div class="down d-flex">
 
+    <!-- player-song - player-controls - player-audio -->
     <!-- info artist -->
     <div class="player-name">
       <div class="artist d-flex">
@@ -310,8 +311,12 @@
           <img src="img/sinister.jpeg" alt="">
         </div>
         <div class="artist-text">
-          <h4>Sinister</h4>
-          <span class="subtitle">Brano nome</span>
+          <h4>
+            <a href="#">Sinister</a>
+          </h4>
+          <span class="subtitle">
+            <a href="">Brano nome</a>
+          </span>
         </div>
       </div>
       <div class="artist-link">
@@ -333,13 +338,13 @@
             <i class="fa-solid fa-shuffle"></i>
           </li>
           <li>
-            <i class="fa-solid fa-caret-left"></i>
+            <i class="fa-solid fa-backward-step"></i>
           </li>
           <li>
-            <i class="fa-regular fa-circle-play"></i>
+            <i class="fa-regular fa-circle-play play-big"></i>
           </li>
           <li>
-            <i class="fa-solid fa-caret-right"></i>
+            <i class="fa-solid fa-forward-step"></i>
           </li>
           <li>
             <i class="fa-solid fa-rotate-right"></i>
@@ -348,7 +353,11 @@
       </nav>
       <div class="central-bar">
         <span><strong>0:25</strong></span>
-        <div class="player-line"></div>
+        <div class="player-line">
+          <div class="elastic-line d-flex">
+            <div class="point-line"></div>
+          </div>
+        </div>
         <span><strong>4:35</strong></span>
       </div>
     </div>
@@ -361,8 +370,10 @@
         <i class="fa-solid fa-display"></i>
         <i class="fa-solid fa-volume-high"></i>
       </div>
-      <div class="instruments-volume">
-        <div class="volume-line"></div>
+      <div class="player-line">
+        <div class="elastic-line">
+          <div class="point-line"></div>
+        </div>
       </div>
     </div>
   </div>

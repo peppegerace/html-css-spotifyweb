@@ -305,6 +305,10 @@ li a {
   min-width: 150px;
 }
 
+.player-name h4 {
+  color: white;
+}
+
 .artist {
   flex-direction: row;
   align-items: center;
@@ -313,6 +317,14 @@ li a {
   
 .artist-text {
   scale: 0.7;
+}
+
+.artist-text h4 a {
+  color: white;
+}
+
+.artist-text a:hover {
+  text-decoration: underline;
 }
 
 .artist-link {
@@ -349,27 +361,36 @@ li a {
   width: 100%;
   font-size: 0.7rem;
   text-align: center;
-  flex-shrink: 0;
-  position: relative;
+  align-items: center;
 }
 
 .player-line {
   width: 70%;
-  border: 2px solid grey;
+  height: 4px;
+  background-color: #5a5a5a;
   border-radius: 5px;
   display: inline-block;
   margin: 0 10px;
+  cursor: pointer;
 }
 
-.player-line::after {
-  content: "";
-  position: absolute;
-  bottom: 30%;
-  left: 15%;
-  width: 17%;
-  border-bottom: 4px solid  white;
+.elastic-line {
+  height: 100%;
+  width: 20%;
+  background-color:  #bebebe;
   border-radius: 5px;
-  cursor: pointer;
+  position: relative;
+}
+
+.point-line {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  display: none;
 }
 
 /* PLAYER-INSTRUMENTS */
@@ -378,42 +399,22 @@ li a {
   min-width: 150px;
   justify-content: end;
   margin-right: 10px;
-  position: relative;
 }
 
 .player-instruments i {
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.player-instruments .player-line,
+.player-instruments .elastic-line {
+  width: 40%;
 }
 
 .instruments-icon {
-  min-width: 90px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.instruments-volume {
-  width: 50%;
-  margin-right: 10px;
-  position: relative;
-}
-
-.volume-line {
-  width: 100%;
-  border: 2px solid grey;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.volume-line::after {
-  content: "";
-  position: absolute;
-  bottom: 24%;
-  left: 5%;
-  width: 30%;
-  border-bottom: 4px solid  white;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 /* HOVER EFFECTS */
 a:hover,
@@ -441,6 +442,18 @@ li:hover a,
 .fa-heart:hover,
 .fa-folder:hover {
   color: white;
+}
+
+.play-big:hover {
+  scale: 1.2;
+}
+
+.player-line:hover .elastic-line {
+  background-color: #7db62a;
+}
+
+.player-line:hover .point-line {
+  display: block;
 }
 
 /* RESPONSIVE */
